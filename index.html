@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>goit-markup-hw-03</title>
+    <title>goit-markup-hw-06</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -422,15 +422,89 @@
             </li>
           </ul>
         </div>
+        <div class="footer-user-contact">
+          <p class="footer-social-text">Subscribe</p>
+          <form class="footer-form">
+            <input class="footer-form-input" type="text" name="footer_email" placeholder="E-mail" />
+            <button class="footer-form-btn" type="submit"
+              >Subscribe
+              <svg class="footer-form-btn-icon" width="24" height="20">
+                <use href="./images/icons/send.svg#Send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn" type="button" data-modal-close>
+        <button class="modal-btn-close" type="button" data-modal-close>
           <svg class="modal-icon" width="8" height="8">
             <use href="./images/icons/close.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <p class="modal-text"><b>Leave your contacts and we will call you back</b></p>
+          <label class="form-description">
+            <span class="form-description-text-name">Name</span>
+            <div class="form-input-wrapper">
+              <input
+                class="form-input"
+                type="text"
+                name="user_name"
+                pattern="^[a-zA-Zа-яА-Я]+"
+                minlength="3"
+                required
+              />
+              <svg class="form-icon" width="12" height="12">
+                <use href="./images/icons/user-contacts.svg#person"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="form-description">
+            <span class="form-description-text">Phone</span>
+            <div class="form-input-wrapper">
+              <input
+                class="form-input"
+                type="tel"
+                name="user_phone"
+                pattern="^[0-9]+"
+                minlength="2"
+                required
+              />
+              <svg class="form-icon" width="12" height="12">
+                <use href="./images/icons/user-contacts.svg#phone"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="form-description">
+            <span class="form-description-text">Email</span>
+            <div class="form-input-wrapper">
+              <input class="form-input" type="text" name="user_email" />
+              <svg class="form-icon" width="12" height="12">
+                <use href="./images/icons/user-contacts.svg#email"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="form-description">
+            <span class="form-description-text">Comment</span>
+            <textarea class="form-message" name="user_message" placeholder="Text input"></textarea>
+          </label>
+          <input
+            class="form-input-check visually-hidden"
+            id="user-policy"
+            type="checkbox"
+            name="user_check"
+          />
+          <label for="user-policy" class="form-description-content">
+            I accept the terms and conditions of the
+            <svg class="form-icon-check" width="10" height="8">
+              <use href="./images/icons/user-contacts.svg#check"></use>
+            </svg>
+            <a class="form-description-content-link" href="">Privacy Policy</a>
+          </label>
+          <button type="submit" class="form-btn-send">Send</button>
+        </form>
       </div>
     </div>
     <script src="./modal.js"></script>
