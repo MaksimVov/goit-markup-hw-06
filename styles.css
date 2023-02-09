@@ -365,7 +365,7 @@ a {
 }
 .footer-social {
   margin-left: 120px;
-  margin-right: 80px;
+  margin-right: auto;
 }
 .footer-social-text {
   font-weight: 500;
@@ -590,7 +590,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-property: background-color;
+  transition-property: background-color, fill;
   transition-duration: var(--time);
   transition-timing-function: var(--time-distribution-function);
 }
@@ -625,11 +625,13 @@ a {
 }
 .form-input-wrapper {
   position: relative;
+  margin-top: 4px;
 }
 .form-icon {
   position: absolute;
   top: 50%;
   left: 19px;
+  cursor: text;
   transform: translateY(-50%);
   transition-duration: var(--time);
   transition-timing-function: var(--time-distribution-function);
